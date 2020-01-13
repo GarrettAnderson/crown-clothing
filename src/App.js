@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import HelloWorld from './components/HelloWorld'
-import HomePage from './components/HomePage'
+import HomePage from './pages/HomePage'
 
 class App extends Component {
   render() {

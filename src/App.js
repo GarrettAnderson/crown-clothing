@@ -1,10 +1,21 @@
 import React, { Component } from 'react'
-import HelloWorld from './components/HelloWorld'
+import { Router, Switch, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
+import ShopPage from './pages/shop/ShopPage'
+import history from './history'
 
 class App extends Component {
   render() {
-    return <HomePage />
+    return (
+    <div>
+      <Router history={history}>
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route path='/shop' component={ShopPage} />
+        </Switch>
+      </Router>
+    </div>
+    )
   }
 }
 
